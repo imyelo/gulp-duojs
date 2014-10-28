@@ -9,12 +9,11 @@ var PluginError = gutil.PluginError;
 function gulpDuo (opts) {
 
   var options = _.defaults(opts || {}, {
-    standalone: '',
-    root: ''
+    standalone: ''
   });
 
-  function compile (content, callback) {
-    Duo(root).entry(content, 'js').standalone(options.standalone).run(function (err, bundle) {
+  function compile (path, callback) {
+    Duo(root).entry(path).standalone(options.standalone).run(function (err, bundle) {
       callback(null, bundle);
     });
   }
@@ -23,19 +22,18 @@ function gulpDuo (opts) {
     if (file.isNull()) {
       callback(null, file);
     }
-    if (file.isBuffer()) {
-      compile(file.contents.toString(), function (err, bundle) {
+    compile(file.path, function (err, bundle) {
+      if (err) {
+        callback(err);
+      }
+      if (file.isBuffer()) {
         file.contents = new Buffer(bundle);
-        callback(null, file);
-      });
-    }
-    if (file.isStream()) {
-      // not tested
-      compile(file.contents.toString(), function (err, bundle) {
+      }
+      if (file.isStream()) {
         file.contents.write(bundle);
-        callback(null, file);
-      });
-    }
+      }
+      callback(null, file);
+    });
   }
 
   return through.obj(duo);
