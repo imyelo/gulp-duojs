@@ -33,7 +33,7 @@ gulp.task('dest.js', function () {
 
 
 **root**  
-*default: __dirname*  
+*default: process.cwd()*  
 
 **standalone**  
 *default: ''*  
