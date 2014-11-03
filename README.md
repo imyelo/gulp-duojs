@@ -30,26 +30,28 @@ gulp.task('dest.js', function () {
 
 #### Options
 [Duo Javascript API](https://github.com/duojs/duo/blob/master/docs/api.md)
-**root**
-*default: __dirname*
 
-**standalone**
-*default: ''*
 
-**development**
-*default: false*
+**root**  
+*default: __dirname*  
 
-**cache**
-*default: true*
+**standalone**  
+*default: ''*  
 
-**copy**
-*default: false*
+**development**  
+*default: false*  
 
-**global**
-*default: ''*
+**cache**  
+*default: true*  
 
-**concurrency**
-*default: 50*
+**copy**  
+*default: false*  
+
+**global**  
+*default: ''*  
+
+**concurrency**  
+*default: 50*  
 
 
 ## LICENSE
