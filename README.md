@@ -5,7 +5,7 @@
 ## Usage
 
 ```javascript
-var duo = require('gulp-duo');
+var duo = require('gulp-duojs');
 
 gulp.task('dest.js', function () {
   gulp.src('src/index.js')
@@ -17,7 +17,7 @@ gulp.task('dest.js', function () {
 or
 
 ```javascript
-var duo = require('gulp-duo');
+var duo = require('gulp-duojs');
 
 gulp.task('dest.js', function () {
   gulp.src('src/index.js')

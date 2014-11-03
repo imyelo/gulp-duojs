@@ -1,5 +1,5 @@
 {
-  "name": "gulp-duo",
+  "name": "gulp-duojs",
   "version": "0.2.0",
   "author": "imyelo",
   "scripts": {
@@ -7,10 +7,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/imyelo/gulp-duo"
+    "url": "https://github.com/imyelo/gulp-duojs"
   },
   "bugs": {
-    "url": "https://github.com/imyelo/gulp-duo/issues"
+    "url": "https://github.com/imyelo/gulp-duojs/issues"
   },
   "main": "./index",
   "dependencies": {
