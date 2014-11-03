@@ -1,4 +1,4 @@
-# gulp-duo
+# gulp-duojs
 > compile duojs
 
 
