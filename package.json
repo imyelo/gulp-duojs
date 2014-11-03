@@ -1,0 +1,26 @@
+{
+  "name": "gulp-duo",
+  "version": "0.1.0",
+  "author": "imyelo",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imyelo/gulp-duo"
+  },
+  "bugs": {
+    "url": "https://github.com/imyelo/gulp-duo/issues"
+  },
+  "main": "./index",
+  "dependencies": {
+    "duo": "^0.8.9",
+    "gulp-util": "^3.0.1",
+    "lodash": "^2.4.1",
+    "through2": "^0.6.3"
+  },
+  "devDependencies": {
+    "assert": "^1.1.2",
+    "event-stream": "^3.1.7"
+  }
+}
