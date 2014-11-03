@@ -10,7 +10,7 @@ const PLUGIN_NAME = 'gulp-duo';
 function gulpDuo (opts, func) {
 
   var options = _.defaults(opts || {}, {
-    root: __dirname,
+    root: process.cwd(),
     standalone: '',
     development: false,
     cache: true,
@@ -44,11 +44,11 @@ function gulpDuo (opts, func) {
       if (err) {
         return callback(err);
       }
+      if (file.isStream()) {
+        return callback(new PluginError(PLUGIN_NAME, 'Streams not supported!'));
+      }
       if (file.isBuffer()) {
         file.contents = new Buffer(bundle);
-      }
-      if (file.isStream()) {
-        callback(new PluginError(PLUGIN_NAME, 'Streams not supported!'));
       }
       callback(null, file);
     });
