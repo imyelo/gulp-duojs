@@ -19,7 +19,7 @@
   },
   "main": "./index",
   "dependencies": {
-    "duo": "^0.8.9",
+    "duo": "^0.12.0",
     "gulp-util": "^3.0.1",
     "lodash": "^2.4.1",
     "through2": "^0.6.3"
