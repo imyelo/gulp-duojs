@@ -24,10 +24,11 @@ describe('gulp-cat', function() {
         });
 
         stream.on('data', function (newFile) {
-            assert.equal(newFile.contents.toString(), result);
+            assert.equal(newFile.contents.toString(), result.toString());
         });
+
         stream.on('end', function () {
-            // fs.writeFile(path.join(__dirname, './fixtures/dest.js'), file.contents.toString());
+            // fs.writeFile(path.join(__dirname, './fixtures/dest.js'), file.contents);
             done();
         });
 

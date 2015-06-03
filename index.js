@@ -48,7 +48,7 @@ function gulpDuo (opts, func) {
         return callback(new PluginError(PLUGIN_NAME, 'Streams not supported!'));
       }
       if (file.isBuffer()) {
-        file.contents = new Buffer(bundle);
+        file.contents = new Buffer(bundle.code);
       }
       callback(null, file);
     });
