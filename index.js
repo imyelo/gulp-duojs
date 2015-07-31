@@ -32,7 +32,7 @@ function gulpDuo (opts, func) {
       .concurrency(options.concurrency);
     func(duo);
     duo.run(function (err, bundle) {
-      callback(null, bundle);
+      callback(err, bundle);
     });
   }
 
